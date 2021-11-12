@@ -11,7 +11,7 @@ var score = 0;
 function preload(){
   skybg = loadImage("skybg.jpg");
   waterbg = loadImage("waterbg.png");
-  shipimg = loadImage("ship.png","ship2.png");
+  shipimg = loadAnimation("ship.png","ship2.png","ship.png");
   helicopterimg = loadImage("helicopter.png");
   bombimg = loadImage("bomb.png");
   gameover=loadImage("gameOver.png");
@@ -28,7 +28,7 @@ function setup() {
     //creating ship
     ship = createSprite(200,310,100,100);
  //ship=createSprite(260,500,100,100);
- ship.addImage(shipimg);
+ ship.addAnimation("shiping",shipimg);
  ship.scale=0.3;
  //ship.addAnimation("shipgoing",shipimg);
  //creating helicopter group
